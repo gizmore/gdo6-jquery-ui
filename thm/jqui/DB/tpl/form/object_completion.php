@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				}
 			});
 		},
-        select: function(event, ui) {
+		select: function(event, ui) {
 			$("#<?=$id1?>").val(ui.item.label);
 			$("#<?=$id2?>").val(ui.item.value);
 			return false;

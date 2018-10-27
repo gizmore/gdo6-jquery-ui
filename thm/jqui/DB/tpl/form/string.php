@@ -1,7 +1,7 @@
 <?php /** @var $field \GDO\DB\GDT_String **/ ?>
 <?php $id = "form_{$field->name}"?>
 <div class="ui-widget gdo-container<?= $field->classError(); ?>">
-  <label for="<?=$id?>"><?= $field->label; ?></label>
+  <label for="<?=$id?>"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <input
    id="<?=$id?>"

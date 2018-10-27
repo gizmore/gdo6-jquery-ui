@@ -3,5 +3,5 @@
  type="submit"
  class="gdt-button"
  name="<?= $field->name; ?>"
- value="<?= $field->label; ?>"
+ value="<?= $field->displayLabel(); ?>"
  <?= $field->htmlDisabled(); ?> /></input>

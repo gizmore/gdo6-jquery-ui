@@ -9,7 +9,7 @@ $val = $field->getVar(); ?>
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
 <?php if ($field->emptyLabel) : ?>
-	  <option value="<?= $field->emptyValue; ?>" <?= $field->emptyValue === $val ? $sel : ''; ?>><?= $field->emptyLabel; ?></option>
+	  <option value="<?= $field->emptyValue; ?>" <?= $field->emptyValue === $val ? $sel : ''; ?>><?= $field->displayEmptyLabel(); ?></option>
 <?php endif; ?>
 	<?php foreach ($field->enumValues as $enumValue) : ?>
 	  <option value="<?=$enumValue?>"<?=$field->htmlSelected($enumValue)?>><?=t('enum_'.$enumValue)?></option>

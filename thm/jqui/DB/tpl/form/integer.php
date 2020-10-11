@@ -4,7 +4,7 @@
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input
    type="number"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    <?= $field->htmlDisabled(); ?>
    <?= $field->htmlRequired(); ?>
    min="<?= $field->min; ?>"

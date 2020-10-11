@@ -17,7 +17,7 @@
    min="<?= $field->min; ?>"
    max="<?= $field->max; ?>"
    step="<?= $field->step; ?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->getVar(); ?>" />
  <?php endif; ?>
   <?= $field->htmlError(); ?>

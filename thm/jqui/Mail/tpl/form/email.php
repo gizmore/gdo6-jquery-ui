@@ -9,7 +9,7 @@ $id = "form_$field->name";
   <?= GDT_Icon::iconS('email'); ?>
   <input id="<?=$id?>"
    type="email"
-   name="form[<?=$field->name?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?> />

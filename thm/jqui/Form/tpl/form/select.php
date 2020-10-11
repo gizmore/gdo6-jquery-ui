@@ -2,11 +2,9 @@
 <div class="ui-widget gdo-container<?= $field->classError(); ?>">
   <label><?= $field->displayLabel(); ?></label><?=$field->htmlIcon()?>
   <select
+   <?=$field->htmlFormName()?>
 <?php if ($field->multiple) : ?>
-   name="form[<?= $field->name?>][]"
    multiple="multiple"
-<?php else : ?>
-   name="form[<?= $field->name?>]"
 <?php endif; ?>
    <?= $field->htmlDisabled(); ?>>
 <?php if ($field->emptyLabel) : ?>

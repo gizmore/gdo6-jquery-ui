@@ -12,7 +12,7 @@
    min="<?= $field->min; ?>"
    max="<?= $field->max; ?>"
    size="<?= min($field->max, 32); ?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>" />
   <?= $field->htmlError(); ?>
 </div>

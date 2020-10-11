@@ -4,7 +4,7 @@
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input
    type="number"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    <?= $field->htmlDisabled(); ?>
    <?= $field->htmlRequired(); ?>
    min="<?= $field->min; ?>"
@@ -12,7 +12,7 @@
    step="<?= $field->step; ?>"
    value="<?= $field->getLow(); ?>" />&nbsp;to&nbsp;<input
    type="number"
-   name="form[<?= $field->highName; ?>]"
+   name="<?=$field->formVariable()?>[<?=$field->highName?>]"
    <?= $field->htmlDisabled(); ?>
    <?= $field->htmlRequired(); ?>
    min="<?= $field->min; ?>"

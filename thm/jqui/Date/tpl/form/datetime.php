@@ -6,7 +6,7 @@ $id = 'date_'.$field->name; ?>
   <input
    id="<?=$id?>"
    type="datetime"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?=$field->displayVar()?>" />
   <?=$field->htmlError()?>
 </div>

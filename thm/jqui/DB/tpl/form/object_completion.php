@@ -15,7 +15,7 @@ $id2 = 'gdoacv_'.$field->name; ?>
   <input
    id="<?=$id2?>"
    type="hidden"
-   name="form[<?=$field->name?>]"
+   <?=$field->htmlFormName()?>
    value="<?=$field->displayVar()?>" />
 </div>
 <script type="text/javascript">

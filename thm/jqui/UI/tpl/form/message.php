@@ -3,7 +3,7 @@
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <textarea
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    rows="6"
    maxRows="6"
    <?= $field->htmlRequired(); ?>

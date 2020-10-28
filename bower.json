@@ -23,5 +23,8 @@
   "dependencies": {
     "jquery-ui": "^1.12.1",
     "ddslick": "*"
+  },
+  "devDependencies": {
+    "jquery-ui.combobox": "^1.0.7"
   }
 }

@@ -25,7 +25,7 @@ final class Module_JQueryUI extends GDO_Module
 	##############
 	public $module_priority = 10;
 	
-	public function getThemes() { return ['jqui']; }
+	public function getTheme() { return 'jqui'; }
 	public function getDependencies() { return ['JQuery']; }
 	public function onLoadLanguage() { return $this->loadLanguage('lang/jqui'); }
 

@@ -15,8 +15,8 @@ use GDO\DB\GDT_Checkbox;
  * - Add auto complete to GDT_Enum.
  *  
  * @author gizmore
- * @version 6.10
- * @since 6.06
+ * @version 6.10.1
+ * @since 6.6.0
  */
 final class Module_JQueryUI extends GDO_Module
 {
@@ -49,13 +49,13 @@ final class Module_JQueryUI extends GDO_Module
 	 */
 	public function jquiThemes()
 	{
-		return array(
+		return [
 			'black-tie', 'blitzer', 'cupertino', 'dark-hive', 'dot-luv',
 			'eggplant', 'excite-bike', 'flick', 'hot-sneaks', 'humanity',
 			'le-frog', 'mint-choc', 'overcast', 'pepper-grinder', 'redmond',
 			'smoothness', 'south-street', 'start', 'sunny', 'swanky-purse',
 			'trontastic', 'ui-darkness', 'ui-lightness', 'vader',
-		);
+		];
 	}
 	
 	##############
@@ -63,25 +63,21 @@ final class Module_JQueryUI extends GDO_Module
 	##############
 	public function onIncludeScripts()
 	{
-	    $min = Module_Core::instance()->cfgMinifyJS() === 'no' ? '' : '.min';
-	    
-	    $this->addBowerJavascript("jquery-ui/jquery-ui$min.js");
-	    $this->addBowerJavascript("ddslick/jquery.ddslick$min.js");
-	    $this->addBowerJavascript("jquery-ui.combobox/lib/jquery-ui.combobox.js");
-        $this->addBowerCSS("jquery-ui.combobox/lib/jquery-ui.combobox.css");
-		$theme = $this->cfgTheme();
-		$this->addBowerCSS("jquery-ui/themes/$theme/jquery-ui$min.css");
-	    
 	    if (Application::instance()->hasTheme('jqui'))
 	    {
-    		
-    		$this->addCSS("css/gdo-jqui.css");
+    	    $min = Module_Core::instance()->jsMinAppend();
+	        $this->addBowerJavascript("jquery-ui/jquery-ui$min.js");
+	        $this->addBowerJavascript("ddslick/jquery.ddslick$min.js");
+	        $this->addBowerJavascript("jquery-ui.combobox/lib/jquery-ui.combobox.js");
+	        $theme = $this->cfgTheme();
+	        $this->addBowerCSS("jquery-ui.combobox/lib/jquery-ui.combobox.css");
+	        $this->addBowerCSS("jquery-ui/themes/$theme/jquery-ui$min.css");
+	        $this->addCSS("css/gdo-jqui.css");
     		$this->addJavascript("js/gdo-jqui.js");
-	    }
-	    
-	    if ($this->cfgComboboxEnums())
-	    {
-	        $this->addJavascript("js/gdo-jqui-combobox-enums.js");
+    		if ($this->cfgComboboxEnums())
+    		{
+    		    $this->addJavascript("js/gdo-jqui-combobox-enums.js");
+    		}
 	    }
 	}
 	

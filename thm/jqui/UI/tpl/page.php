@@ -2,8 +2,9 @@
 use GDO\Core\Website;
 use GDO\Util\Javascript;
 use GDO\UI\GDT_Bar;
-use GDO\Core\Module_Core;
-$page instanceof GDO\UI\GDT_Page;
+use GDO\Javascript\Module_Javascript;
+
+/** @var $page GDO\UI\GDT_Page; **/
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +23,6 @@ $page instanceof GDO\UI\GDT_Page;
 	  <nav id="gdo-right-bar"><?= GDT_Bar::make()->vertical()->yieldHook('RightBar'); ?></nav>
 	</div>
 	<footer><?= GDT_Bar::make()->horizontal()->yieldHook('BottomBar'); ?></footer>
-	<?= Javascript::displayJavascripts(Module_Core::instance()->cfgMinifyJS() === 'concat'); ?>
+	<?= Javascript::displayJavascripts(Module_Javascript::instance()->cfgMinifyJS() === 'concat'); ?>
   </body>
 </html>

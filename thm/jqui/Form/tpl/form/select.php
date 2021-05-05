@@ -1,5 +1,5 @@
 <?php /** @var $field \GDO\Form\GDT_Select **/ ?>
-<div class="ui-widget gdo-container<?= $field->classError(); ?>">
+<div class="ui-widget gdt-container<?= $field->classError(); ?>">
   <label><?= $field->displayLabel(); ?></label><?=$field->htmlIcon()?>
   <select
    <?=$field->htmlFormName()?>

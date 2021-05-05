@@ -1,7 +1,7 @@
 <?php /** @var $field \GDO\DB\GDT_Enum **/
 $sel = 'selected="selected"';
 $val = $field->getVar(); ?>
-<div class="ui-widget gdo-container<?= $field->classError(); ?>">
+<div class="ui-widget gdt-container<?= $field->classError(); ?>">
   <?= $field->htmlIcon(); ?>
   <label><?= $field->displayLabel(); ?></label>
   <select

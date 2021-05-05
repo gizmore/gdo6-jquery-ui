@@ -2,7 +2,7 @@
 <?php /** @var $field \GDO\DB\GDT_Object **/
 $id1 = 'gdoacl_'.$field->name;
 $id2 = 'gdoacv_'.$field->name; ?>
-<div class="ui-widget gdo-container<?=$field->classError()?>">
+<div class="ui-widget gdt-container<?=$field->classError()?>">
   <label for="<?=$id1;?>"><?=$field->displayLabel()?></label>
   <?=$field->htmlIcon()?>
   <input

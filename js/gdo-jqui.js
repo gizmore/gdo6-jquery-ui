@@ -1,6 +1,6 @@
 "use strict";
 $(function(){
-	$('.gdt-button, .gdo-button a').button();
+	$('.gdt-button').button();
 	$('.ui-widget select').selectmenu();
 	$.datepicker.setDefaults({
 		showOn: "both"

@@ -1,5 +1,5 @@
 <?php /** @var $field \GDO\DB\GDT_Object **/ ?>
-<div class="gdo-container<?= $field->classError(); ?>">
+<div class="gdt-container<?= $field->classError(); ?>">
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <input

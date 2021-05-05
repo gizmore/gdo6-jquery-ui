@@ -2,7 +2,7 @@
 use GDO\Form\GDT_AntiCSRF;
 $field instanceof GDT_AntiCSRF;
 ?>
-<div class="ui-widget gdo-container<?=$field->classError()?>">
+<div class="ui-widget gdt-container<?=$field->classError()?>">
   <input
    type="hidden"
    <?=$field->htmlFormName()?>

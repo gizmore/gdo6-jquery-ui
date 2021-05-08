@@ -8,6 +8,6 @@ $(function(){
 //		buttonImage: "calendar.gif",
 //		buttonText: "Calendar"
 	});
-	$.datepicker.setDefaults($.datepicker.regional[window.GWF_LANGUAGE]);
+	$.datepicker.setDefaults($.datepicker.regional[window.GDO_LANGUAGE]);
 	$('.gdt-date input').datepicker();
 });

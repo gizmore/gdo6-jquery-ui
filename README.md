@@ -21,7 +21,7 @@ Install the module via admin panel or installer cli,
     
 Configure the theme in your application config.php (optional)
 
-    define('GWF_THEMES', 'jqui,default');
+    define('GDO_THEMES', 'jqui,default');
     
 ### Dependencies
 This module has JQuery dependencies. https://github.com/gizmore/gdo6-jquery

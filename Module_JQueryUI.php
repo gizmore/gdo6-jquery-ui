@@ -2,10 +2,10 @@
 namespace GDO\JQueryUI;
 
 use GDO\Core\GDO_Module;
-use GDO\Core\Module_Core;
 use GDO\Core\Application;
 use GDO\DB\GDT_EnumNoI18n;
 use GDO\DB\GDT_Checkbox;
+use GDO\Javascript\Module_Javascript;
 
 /**
  * JQueryUI includes and theme.
@@ -63,9 +63,9 @@ final class Module_JQueryUI extends GDO_Module
 	##############
 	public function onIncludeScripts()
 	{
+	    $min = Module_Javascript::instance()->jsMinAppend();
 	    if (Application::instance()->hasTheme('jqui'))
 	    {
-    	    $min = Module_Core::instance()->jsMinAppend();
 	        $this->addBowerJavascript("jquery-ui/jquery-ui$min.js");
 	        $this->addBowerJavascript("ddslick/jquery.ddslick$min.js");
 	        $this->addBowerJavascript("jquery-ui.combobox/lib/jquery-ui.combobox.js");
@@ -79,6 +79,10 @@ final class Module_JQueryUI extends GDO_Module
     		    $this->addJavascript("js/gdo-jqui-combobox-enums.js");
     		}
 	    }
+// 	    else
+// 	    {
+// 	        $this->addBowerJavascript("jquery-ui/jquery-ui$min.js");
+// 	    }
 	}
 	
 }

@@ -1,6 +1,6 @@
 <?php
 use GDO\Core\Website;
-use GDO\Util\Javascript;
+use GDO\Javascript\Javascript;
 use GDO\UI\GDT_Bar;
 use GDO\Javascript\Module_Javascript;
 

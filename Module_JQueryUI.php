@@ -66,22 +66,22 @@ final class Module_JQueryUI extends GDO_Module
 	    $min = Module_Javascript::instance()->jsMinAppend();
 	    if (Application::instance()->hasTheme('jqui'))
 	    {
-	        $this->addBowerJavascript("jquery-ui/jquery-ui$min.js");
-	        $this->addBowerJavascript("ddslick/jquery.ddslick$min.js");
-	        $this->addBowerJavascript("jquery-ui.combobox/lib/jquery-ui.combobox.js");
+	        $this->addBowerJS("jquery-ui/jquery-ui$min.js");
+	        $this->addBowerJS("ddslick/jquery.ddslick$min.js");
+	        $this->addBowerJS("jquery-ui.combobox/lib/jquery-ui.combobox.js");
 	        $theme = $this->cfgTheme();
 	        $this->addBowerCSS("jquery-ui.combobox/lib/jquery-ui.combobox.css");
 	        $this->addBowerCSS("jquery-ui/themes/$theme/jquery-ui$min.css");
 	        $this->addCSS("css/gdo-jqui.css");
-    		$this->addJavascript("js/gdo-jqui.js");
+    		$this->addJS("js/gdo-jqui.js");
     		if ($this->cfgComboboxEnums())
     		{
-    		    $this->addJavascript("js/gdo-jqui-combobox-enums.js");
+    		    $this->addJS("js/gdo-jqui-combobox-enums.js");
     		}
 	    }
 // 	    else
 // 	    {
-// 	        $this->addBowerJavascript("jquery-ui/jquery-ui$min.js");
+// 	        $this->addBowerJS("jquery-ui/jquery-ui$min.js");
 // 	    }
 	}
 	

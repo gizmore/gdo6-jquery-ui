@@ -7,6 +7,6 @@
    rows="6"
    maxRows="6"
    <?= $field->htmlRequired(); ?>
-   <?= $field->htmlDisabled(); ?>><?= $field->displayVar(); ?></textarea>
+   <?= $field->htmlDisabled(); ?>><?= $field->display(); ?></textarea>
   <?= $field->htmlError(); ?>
 </div>

@@ -16,7 +16,7 @@ $id2 = 'gdoacv_'.$field->name; ?>
    id="<?=$id2?>"
    type="hidden"
    <?=$field->htmlFormName()?>
-   value="<?=$field->displayVar()?>" />
+   value="<?=$field->display()?>" />
 </div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function(){

@@ -10,7 +10,7 @@ $id = "form_$field->name";
   <input id="<?=$id?>"
    type="email"
    <?=$field->htmlFormName()?>
-   value="<?= $field->displayVar(); ?>"
+   value="<?= $field->display(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?> />
   <?= $field->htmlError(); ?>

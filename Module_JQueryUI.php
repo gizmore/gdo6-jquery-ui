@@ -63,7 +63,7 @@ final class Module_JQueryUI extends GDO_Module
 	##############
 	public function onIncludeScripts()
 	{
-	    $min = Module_Javascript::instance()->jsMinAppend();
+	    $min = Module_Javascript::instance()->cfgMinAppend();
 	    if (Application::instance()->hasTheme('jqui'))
 	    {
 	        $this->addBowerJS("jquery-ui/jquery-ui$min.js");
